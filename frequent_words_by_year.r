@@ -189,3 +189,5 @@ plot2 <- ggplot(words_to_plot_df, aes(x = year, y = frequency, colour = word)) +
   scale_x_continuous(breaks = seq(2013, 2020, 1)) + #Demands that all years be shown on the x axix
   scale_color_discrete(guide = "none") + #eliminates the standard labels from the plot
   geom_dl(aes(label = word), method = list(dl.trans(x = x + 0.2), "last.points", cex = 0.8, last.qp)) #uses the direct labels library to put the labels at the end of the lines
+
+#TESTING PUSHING TO GITHUB
