@@ -3,9 +3,9 @@
 library(wordcloud)
 library(stringr)
 
-stop_words <- scan("stopwords.txt", what = "character", sep = "\n")
+stop_words <- scan("conditions/stopwords.txt", what = "character", sep = "\n")
 
-fullBiblio <- read.csv("GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
+fullBiblio <- read.csv("data/GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
 notesVector <- fullBiblio$Notes #extracts notes into a character vector
 notesVector <- notesVector[which(notesVector != "")] #removes empty strings
 notesWordsVector <- tolower(paste(notesVector, collapse = " ")) #puts everything into a single string

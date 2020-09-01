@@ -4,13 +4,13 @@ library(stringr)
 library(ggplot2)
 
 #loading stopwords
-stop_words <- scan("stopwords.txt", what = "character", sep = "\n")
+stop_words <- scan("conditions/stopwords.txt", what = "character", sep = "\n")
 
 #loading list of meaningful words to create the final chart
-meaning_words_v <- scan("meaningful_words.txt", what = "character", sep = "\n")
+meaning_words_v <- scan("conditions/meaningful_words.txt", what = "character", sep = "\n")
 
 #loading data
-fullBiblio <- read.csv("GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
+fullBiblio <- read.csv("data/GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
 
 #turning Date added column into a date format
 fullBiblio$Date.Added <- as.Date(fullBiblio$Date.Added)

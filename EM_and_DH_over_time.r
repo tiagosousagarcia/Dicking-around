@@ -4,14 +4,14 @@ library(stringr)
 library(ggplot2)
 
 #loading stopwords
-stop_words <- scan("stopwords.txt", what = "character", sep = "\n")
+stop_words <- scan("conditions/stopwords.txt", what = "character", sep = "\n")
 
 #loading EM and DH words
-EM_words_v <- scan("EM_words.txt", what = "character", sep = "\n")
-DH_words_v <- scan("DH_words.txt", what = "character", sep = "\n")
+EM_words_v <- scan("conditions/EM_words.txt", what = "character", sep = "\n")
+DH_words_v <- scan("conditions/DH_words.txt", what = "character", sep = "\n")
 
 #loading data
-fullBiblio <- read.csv("GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
+fullBiblio <- read.csv("data/GPA.csv", colClasses = "character") #load complete bibliography; colClasses reads everything as string
 
 #turning Date added column into a date format
 fullBiblio$Date.Added <- as.Date(fullBiblio$Date.Added)
