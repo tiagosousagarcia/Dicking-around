@@ -16,4 +16,7 @@ yes_per <- yes_total / nrow(results_total_df) * 100
 barplot(c(no_per, yes_per),
   main = "Is Die Hard a Christmas film?",
   names.arg = c("No", "Yes"),
-  ylab = "Percentage", ylim = c(0,80), xpd = FALSE,)
+  #ylab = "Percentage", 
+  ylim = c(29,71),
+  axes = FALSE,
+  xpd = FALSE,)
